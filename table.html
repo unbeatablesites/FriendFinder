@@ -58,7 +58,7 @@
                 tableDiv.attr("id", "tableWell-" + i + 1);
                 $("#tableDiv").append(tableDiv);
                 var tableNumber = i + 1;
-                $("#tableWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "<\/span> | " + tableData[i].customerID + ": " + tableData[i].customerName.charAt(0).toUpperCase() + tableData[i].customerName.substr(1)  + "<\/h2>");
+                $("#tableWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "<\/span> | " + tableData[i].customerID + ":   " + tableData[i].customerName.toUpperCase()+"   " + tableData[i].customerEmail+"   "+tableData[i].phoneNumber+ "<\/h2>");
               }
             });
         }
