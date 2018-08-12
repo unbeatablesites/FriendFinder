@@ -40,6 +40,115 @@
 							<div class="form-group">
 								<label for="reserve-unique-id">Unique ID</label> <input class="form-control" id="reserve-unique-id" type="text">
                             </div>
+                            <div class="form-group">
+						    <label for="Select1">Select 1</label>
+						    <select class="form-control" id="Select1">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
+
+						  <div class="form-group">
+						    <label for="Select1">Select 1</label>
+						    <select class="form-control" id="Select2">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
+
+						  <div class="form-group">
+						    <label for="Select1">Select 1</label>
+						    <select class="form-control" id="Select3">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
+
+						  <div class="form-group">
+						    <label for="Select1">Select 1</label>
+						    <select class="form-control" id="Select4">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
+
+						  <div class="form-group">
+						    <label for="Select1">Select 1</label>
+						    <select class="form-control" id="Select5">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
+
+						  <div class="form-group">
+						    <label for="Select1">Select 1</label>
+						    <select class="form-control" id="Select6">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
+
+						  <div class="form-group">
+						    <label for="Select1">Select 1</label>
+						    <select class="form-control" id="Select7">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
+
+						  <div class="form-group">
+						    <label for="Select1">Select 1</label>
+						    <select class="form-control" id="Select8">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
+
+						  <div class="form-group">
+						    <label for="Select1">Select 1</label>
+						    <select class="form-control" id="Select9">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
+
+						  <div class="form-group">
+						    <label for="Select10">Select 1</label>
+						    <select class="form-control" id="Select10">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
                             <input type="submit" value="Submit" class="btn btn-lg btn-primary" id="submit">
 						</form>
 					</div>
@@ -61,7 +170,8 @@
 	         customerName: $("#reserve-name").val().trim(),
 	         phoneNumber: $("#reserve-phone").val().trim(),
 	         customerEmail: $("#reserve-email").val().trim(),
-	         customerID: $("#reserve-unique-id").val().trim()
+	         customerID: $("#reserve-unique-id").val().trim(),
+	         answer1: $("#Select1").val().trim().number()
 	       };
 	 
            console.log(newReservation);
@@ -87,6 +197,7 @@
 	        $("#reserve-phone").val("");
 	        $("#reserve-email").val("");
             $("#reserve-unique-id").val(""); 
+            $("#Select1").val().trim().number();
 	 
 	     });
 	 
