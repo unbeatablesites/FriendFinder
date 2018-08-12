@@ -55,7 +55,7 @@ app.get("/api/waitlist", (request, response) => {
 app.post("/api/tables", (request, response) => {
     let newTable = request.body;
     
-    if (tables.length >= 5) {
+    if (tables.length >= 10) {
         waitingList.push(newTable);
     }
     else {
