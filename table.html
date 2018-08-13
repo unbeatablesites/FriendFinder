@@ -47,9 +47,7 @@
 	<script type="text/javascript">
 	 
         function runTableQuery() {
-          var currentURL = window.location.origin;
-          var total = q1+q2+q3+q4+q5+q6+q7+q8+q9+q10;
-    
+          var currentURL = window.location.origin;    
           $.ajax({ url: currentURL + "/api/tables", method: "GET" })
             .then(function(tableData) {
     
@@ -59,7 +57,7 @@
                 tableDiv.attr("id", "tableWell-" + i + 1);
                 $("#tableDiv").append(tableDiv);
                 var tableNumber = i + 1;
-                $("#tableWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "<\/span> | " +tableData[i].total + tableData[i].customerID + ":   " + tableData[i].customerName.toUpperCase()+"   " + tableData[i].customerEmail+"   "+tableData[i].phoneNumber+ "<\/h2>");
+                $("#tableWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "<\/span> | " +tableData[i].answer1 + tableData[i].customerID + ":   " + tableData[i].customerName.toUpperCase()+"   " + tableData[i].customerEmail+"   "+tableData[i].phoneNumber+ "<\/h2>");
               }
             });
         }
