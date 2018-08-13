@@ -155,11 +155,6 @@
 				</div>
 			</div>
 		</div>
-		<footer class="footer">
-			<div class="container">
-				<p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
-			</div>
-		</footer>
 	</div>
 	<script type="text/javascript">
 	 
@@ -176,39 +171,23 @@
 	       };
 	 
            console.log(newReservation);
-           
+
             $.post("/api/tables", newReservation)
                 .then(data => {
                     console.log(data);
                 });
 
-            $.get("/api/waitlist")
+            $.get("/api/tables", newReservation.a)
                 .then(data => {
-                    console.log(data);
-                    if (data === []) {
+                	var answer1 = newReservation;
+                    console.log(answer1);
+                    if (answer1 === 16) {
                         alert("Success! You have a table.");
                     }
                     else {
-                        alert("Sorry, our tables are full. You have been placed on the waitlist.")
+                        alert("Sorry, our tables are full. You have been placed on the waitlist bro.")
                     }
                 })
-
-
-         //    $("#reserve-name").val("");
-	        // $("#reserve-phone").val("");
-	        // $("#reserve-email").val("");
-         //    $("#reserve-unique-id").val(""); 
-         //     var q1 =  $("#Select1").number().val("");
-	        //  var q2 = $("#Select2").val("");
-	        //  var q3 = $("#Select3").val("");
-	        //  var q4 = $("#Select4").val("");
-	        //  var q5 = $("#Select5").val("");
-	        //  var q6 = $("#Select6").val("");
-	        //  var q7 = $("#Select7").val("");
-	        //  var q8 = $("#Select8").val("");
-	        //  var q9 = $("#Select9").val("");
-	        //  var q10 = $("#Select10").val("");
-
 	
 	     });
 	 

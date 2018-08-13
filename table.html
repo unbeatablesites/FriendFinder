@@ -29,12 +29,6 @@
 
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">Waiting List</h4>
-					</div>
-					<div class="panel-body" id="waitlistSection"></div>
-				</div>
 			</div>
 		</div>
 		<footer class="footer">
@@ -57,7 +51,7 @@
                 tableDiv.attr("id", "tableWell-" + i + 1);
                 $("#tableDiv").append(tableDiv);
                 var tableNumber = i + 1;
-                $("#tableWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "<\/span> | " +tableData[i].answer1 + tableData[i].customerID + ":   " + tableData[i].customerName.toUpperCase()+"   " + tableData[i].customerEmail+"   "+tableData[i].phoneNumber+ "<\/h2>");
+                $("#tableWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "<\/span> | "+"Match Points:   "  +tableData[i].answer1 +":   " + tableData[i].customerName.toUpperCase()+"   " + tableData[i].customerEmail+"   "+tableData[i].phoneNumber+ "<\/h2>");
               }
             });
         }

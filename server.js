@@ -12,6 +12,7 @@ let waitingList = [];
 
 let tables = [
  {
+   answer1: 10,  
    customerName: "frank",
    phoneNumber: "123-456-7890",
    customerEmail: "frank@gmail.com",
@@ -43,14 +44,14 @@ app.get("/api/waitlist", (request, response) => {
 app.post("/api/tables", (request, response) => {
     let newTable = request.body;
     
-    if (tables.length >= 10) {
+    if (tables.length >= 40) {
         waitingList.push(newTable);
     }
     else {
         tables.push(newTable);
     }
 
-    response.sendFile(path.join(__dirname, "add.html"));
+    // response.sendFile(path.join(__dirname, "add.html"));
 });
 
 
