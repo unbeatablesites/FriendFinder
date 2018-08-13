@@ -12,11 +12,11 @@ let waitingList = [];
 
 let tables = [
  {
-   answer1: 10,  
+     
    customerName: "frank",
    phoneNumber: "123-456-7890",
    customerEmail: "frank@gmail.com",
-   customerID: 900
+   answer1: "10"
  }
 ];
 

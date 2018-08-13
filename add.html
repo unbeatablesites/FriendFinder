@@ -177,9 +177,9 @@
                     console.log(data);
                 });
 
-            $.get("/api/tables", newReservation.a)
+            $.get("/api/tables", newReservation)
                 .then(data => {
-                	var answer1 = newReservation;
+                	var answer1 = parseInt($("#Select1").val().trim())+parseInt($("#Select2").val().trim())+parseInt($("#Select3").val().trim())+parseInt($("#Select4").val().trim())+parseInt($("#Select5").val().trim())+parseInt($("#Select6").val().trim())+parseInt($("#Select7").val().trim())+parseInt($("#Select8").val().trim())+parseInt($("#Select9").val().trim())+parseInt($("#Select10").val().trim());
                     console.log(answer1);
                     if (answer1 === 16) {
                         alert("Success! You have a table.");
