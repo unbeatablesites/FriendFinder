@@ -52,7 +52,7 @@
 						  </div>
 
 						  <div class="form-group">
-						    <label for="Select1">Select 1</label>
+						    <label for="Select2">Select 1</label>
 						    <select class="form-control" id="Select2">
 						      <option>1</option>
 						      <option>2</option>
@@ -63,7 +63,7 @@
 						  </div>
 
 						  <div class="form-group">
-						    <label for="Select1">Select 1</label>
+						    <label for="Select3">Select 1</label>
 						    <select class="form-control" id="Select3">
 						      <option>1</option>
 						      <option>2</option>
@@ -74,7 +74,7 @@
 						  </div>
 
 						  <div class="form-group">
-						    <label for="Select1">Select 1</label>
+						    <label for="Select4">Select 1</label>
 						    <select class="form-control" id="Select4">
 						      <option>1</option>
 						      <option>2</option>
@@ -85,7 +85,7 @@
 						  </div>
 
 						  <div class="form-group">
-						    <label for="Select1">Select 1</label>
+						    <label for="Select5">Select 1</label>
 						    <select class="form-control" id="Select5">
 						      <option>1</option>
 						      <option>2</option>
@@ -96,7 +96,7 @@
 						  </div>
 
 						  <div class="form-group">
-						    <label for="Select1">Select 1</label>
+						    <label for="Select6">Select 1</label>
 						    <select class="form-control" id="Select6">
 						      <option>1</option>
 						      <option>2</option>
@@ -107,7 +107,7 @@
 						  </div>
 
 						  <div class="form-group">
-						    <label for="Select1">Select 1</label>
+						    <label for="Select7">Select 1</label>
 						    <select class="form-control" id="Select7">
 						      <option>1</option>
 						      <option>2</option>
@@ -118,7 +118,7 @@
 						  </div>
 
 						  <div class="form-group">
-						    <label for="Select1">Select 1</label>
+						    <label for="Select8">Select 1</label>
 						    <select class="form-control" id="Select8">
 						      <option>1</option>
 						      <option>2</option>
@@ -129,7 +129,7 @@
 						  </div>
 
 						  <div class="form-group">
-						    <label for="Select1">Select 1</label>
+						    <label for="Select9">Select 1</label>
 						    <select class="form-control" id="Select9">
 						      <option>1</option>
 						      <option>2</option>
@@ -171,7 +171,18 @@
 	         phoneNumber: $("#reserve-phone").val().trim(),
 	         customerEmail: $("#reserve-email").val().trim(),
 	         customerID: $("#reserve-unique-id").val().trim(),
-	         answer1: $("#Select1").val().trim().number()
+	         answer1: $("#Select1").val().trim(),
+	         answer2: $("#Select2").val().trim(),
+	         answer3: $("#Select3").val().trim(),
+	         answer4: $("#Select4").val().trim(),
+	         answer5: $("#Select5").val().trim(),
+	         answer6: $("#Select6").val().trim(),
+	         answer7: $("#Select7").val().trim(),
+	         answer8: $("#Select8").val().trim(),
+	         answer9: $("#Select9").val().trim(),
+	         answer10: $("#Select10").val().trim(),
+
+	         score: $("#Select1").val()+$("#Select2").val()+$("#Select3").val()+$("#Select4").val()+$("#Select5").val()+$("#Select6").val()+$("#Select7").val()+$("#Select8").val()+$("#Select9").val()+$("#Select10").val()
 	       };
 	 
            console.log(newReservation);
@@ -197,8 +208,17 @@
 	        $("#reserve-phone").val("");
 	        $("#reserve-email").val("");
             $("#reserve-unique-id").val(""); 
-            $("#Select1").val().trim().number();
-	 
+            $("#Select1").val("");
+	        $("#Select2").val("");
+	        $("#Select3").val("");
+	        $("#Select4").val("");
+	        $("#Select5").val("");
+	        $("#Select6").val("");
+	        $("#Select7").val("");
+	        $("#Select8").val("");
+	        $("#Select9").val("");
+	        $("#Select10").val("");
+	
 	     });
 	 
 	</script>
