@@ -21,6 +21,10 @@ let tables = [
 ];
 
 
+app.get("/matchPage", (request, response) => {
+    response.sendFile(path.join(__dirname, "view2.html"));
+});
+
 app.get("/", (request, response) => {
     response.sendFile(path.join(__dirname, "view.html"));
 });
@@ -44,7 +48,7 @@ app.get("/api/waitlist", (request, response) => {
 app.post("/api/tables", (request, response) => {
     let newTable = request.body;
     
-    if (tables.length >= 40) {
+    if (tables.length >= 80) {
         waitingList.push(newTable);
     }
     else {

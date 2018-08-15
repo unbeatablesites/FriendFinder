@@ -161,7 +161,7 @@
 	     $("#submit").on("click", function(event) {
 	       event.preventDefault();
 
-	       
+
 	       let newReservation = {
 	         customerName: $("#reserve-name").val().trim(),
 	         phoneNumber: $("#reserve-phone").val().trim(),
@@ -183,6 +183,7 @@
                     console.log(answer1);
                     if (answer1 === 16) {
                         alert("Success! You have a table.");
+                        window.location.replace('http://localhost:3000/matchPage')
                     }
                     else {
                         alert("Sorry, our tables are full. You have been placed on the waitlist bro.")

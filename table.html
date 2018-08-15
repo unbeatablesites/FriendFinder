@@ -56,22 +56,24 @@
             });
         }
     
-        function runWaitListQuery() {
-          var currentURL = window.location.origin;
-          $.ajax({ url: currentURL + "/api/waitlist", method: "GET" })
-            .then(function(waitlistData) {
+        // function runWaitListQuery() {
+        //   var currentURL = window.location.origin;
+        //   $.ajax({ url: currentURL + "/api/waitlist", method: "GET" })
+        //     .then(function(waitlistData) {
 
-                for (var i = 0; i < waitlistData.length; i++) {
-                    var waitlistSection = $("<div>");
-                    waitlistSection.addClass("well");
-                    waitlistSection.attr("id", "waitlistWell-" + i + 1);
-                    $("#waitlistSection").append(waitlistSection);
-    
-                    var tableNumber = i + 1;	 
-                    $("#waitlistWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "<\/span> | " + waitlistData[i].customerID + ": " + tableData[i].customerName.charAt(0).toUpperCase() + tableData[i].customerName.substr(1) + "<\/h2>");
-                }
-            });
-        }
+
+
+
+        //         for (var i = 0; i < waitlistData.length; i++) {
+        //             var waitlistSection = $("<div>");
+        //             waitlistSection.addClass("well");
+        //             waitlistSection.attr("id", "waitlistWell-" + i + 1);
+        //             $("#waitlistSection").append(waitlistSection);
+        //             var tableNumber = i + 1;	 
+        //             $("#waitlistWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "<\/span> | " + waitlistData[i].customerID + ": " + tableData[i].customerName.charAt(0).toUpperCase() + tableData[i].customerName.substr(1) + "<\/h2>");
+        //         }
+        //     });
+        // }
     
         function clearTable() {
           var currentURL = window.location.origin;
