@@ -2,24 +2,92 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Friend Finder</title><!-- Latest compiled and minified CSS -->
+	<title>Friend Finder</title><!-- Latest compiled and minified CSS & JS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
 </head>
 <body>
 	<div class="container">
 		<div class="jumbotron">
 			<h1 class="text-center"><span class="glyphicon glyphicon-fire"></span>Friend Finder</h1>
 			<hr>
-			<h2 class="text-center">Search the data base to see who's a good match!</h2><br>
+			<h2 class="text-center">Friends in the data base</h2><br>
 			<div class="text-center">
-				<a href="/table"><button class="btn btn-lg btn-primary" type="button"><span class="glyphicon glyphicon-list-alt"></span>View Friends</button></a> <a href="/reserve"><button class="btn btn-lg btn-danger" type="button"><span class="glyphicon glyphicon-credit-card"></span> Add your information</button></a>
+				<a href="/reserve"><button class="btn btn-lg btn-danger" type="button"><span class="glyphicon glyphicon-credit-card"></span> Add your information!</button></a> <a href="/"><button class="btn btn-lg btn-default" type="button"><span class="glyphicon glyphicon-home"></span></button></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">Current Friends in the data base.</h4>
+					</div>
+					<div class="panel-body" id="tableDiv">
+
+					</div>
+				</div>
 			</div>
 		</div>
 		<footer class="footer">
 			<div class="container">
-				<p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
+				<p>Control Panel</p>
+				<p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
 			</div>
 		</footer>
 	</div>
+	<script type="text/javascript">
+	 
+        function runTableQuery() {
+          var currentURL = window.location.origin;    
+          $.ajax({ url: currentURL + "/api/tables", method: "GET" })
+            .then(function(tableData) {
+    
+              for (var i = 0; i < tableData.length; i++) {
+                var tableDiv = $("<div>");
+                tableDiv.addClass("well");
+                tableDiv.attr("id", "tableWell-" + i + 1);
+                $("#tableDiv").append(tableDiv);
+                var tableNumber = i + 1;
+                $("#tableWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "<\/span> | "+"Match Points:   "  +tableData[i].answer1 +":   " + tableData[i].customerName.toUpperCase()+"   " + tableData[i].customerEmail+"   "+tableData[i].phoneNumber+ "<\/h2>");
+              }
+            });
+        }
+    
+        // function runWaitListQuery() {
+        //   var currentURL = window.location.origin;
+        //   $.ajax({ url: currentURL + "/api/waitlist", method: "GET" })
+        //     .then(function(waitlistData) {
+
+
+
+
+        //         for (var i = 0; i < waitlistData.length; i++) {
+        //             var waitlistSection = $("<div>");
+        //             waitlistSection.addClass("well");
+        //             waitlistSection.attr("id", "waitlistWell-" + i + 1);
+        //             $("#waitlistSection").append(waitlistSection);
+        //             var tableNumber = i + 1;	 
+        //             $("#waitlistWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "<\/span> | " + waitlistData[i].customerID + ": " + tableData[i].customerName.charAt(0).toUpperCase() + tableData[i].customerName.substr(1) + "<\/h2>");
+        //         }
+        //     });
+        // }
+    
+        function clearTable() {
+          var currentURL = window.location.origin;
+          $.ajax({ url: currentURL + "/api/clear", method: "POST" });
+        }
+    
+        $("#clear").on("click", function() {
+          alert("Clearing...");
+          clearTable();
+          location.reload();	 
+        });
+    
+        runTableQuery();
+        runWaitListQuery();	 
+   </script>
 </body>
 </html>
