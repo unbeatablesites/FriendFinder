@@ -22,7 +22,7 @@ let tables = [
 
 
 app.get("/matchPage", (request, response) => {
-    response.sendFile(path.join(__dirname, "view2.html"));
+    response.sendFile(path.join(__dirname, "matchPage.html"));
 });
 
 app.get("/", (request, response) => {
