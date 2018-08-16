@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Simple Server</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Friend Finder</title><!-- Latest compiled and minified CSS & JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+  </script>
 </head>
 <body>
-  <div class='container'>
-    <div class='jumbotron text-center'>
-      <h1>Simple Form</h1>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span>Friend Finder</h1>
+      <hr>
+      <h2 class="text-center">This is your matching friend</h2><br>
+      <div class="text-center">
+        <a href="/reserve"><button class="btn btn-lg btn-danger" type="button"><span class="glyphicon glyphicon-credit-card"></span> Add your information!</button></a> <a href="/"><button class="btn btn-lg btn-default" type="button"><span class="glyphicon glyphicon-home"></span></button></a>
+      </div>
     </div>
     <div class="row">
-      <div class="col-sm-12 text-center">
-        <form action="http://localhost:" method="POST">
-         <input name="name" placeholder="enter your name">
-         <input name="band" placeholder="enter your favorite band">
-         <button type='submit'>submit</button>
-       </form>
-     </div>
-   </div>
- </div>
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">Your Match</h4>
+          </div>
+          <div class="panel-body" id="tableDiv">
+                  <div><img src="images/frank.png" alt="Perfect match!" width="500" height="600"></div>
+                  <P>Frank Uzoka</P>
+                  <P>404-250-2486</P>
+                  <P>FrankUzoka@hotmail.com</P>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>Control Panel</p>
+        <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
+      </div>
+    </footer>
+  </div>
+  
+   </script>
 </body>
 </html>

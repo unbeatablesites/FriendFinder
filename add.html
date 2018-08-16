@@ -181,13 +181,11 @@
                 .then(data => {
                 	var answer1 = parseInt($("#Select1").val().trim())+parseInt($("#Select2").val().trim())+parseInt($("#Select3").val().trim())+parseInt($("#Select4").val().trim())+parseInt($("#Select5").val().trim())+parseInt($("#Select6").val().trim())+parseInt($("#Select7").val().trim())+parseInt($("#Select8").val().trim())+parseInt($("#Select9").val().trim())+parseInt($("#Select10").val().trim());
                     console.log(answer1);
-                    if (answer1 === 16) {
-                        alert("Success! You have a table.");
+                    if (answer1 === answer1) {
+                        alert("Success! You have a match.");
                         window.location.replace('http://localhost:3000/matchPage')
                     }
-                    else {
-                        alert("Sorry, our tables are full. You have been placed on the waitlist bro.")
-                    }
+                 
                 })
 	
 	     });
